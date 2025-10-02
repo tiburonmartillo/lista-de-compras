@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista de compras semanal personalizada con plan nutricional optimizado. Organiza tus compras por categorías y semanas.">
+    <meta name="keywords" content="lista de compras, plan nutricional, compras semanales, organización, alimentos">
+    <meta name="author" content="Lista de Compras App">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lista de Compras Semanal - Plan Nutricional">
+    <meta property="og:description" content="Organiza tus compras semanales con nuestro plan nutricional personalizado">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Lista de Compras Semanal - Plan Nutricional">
+    <meta property="twitter:description" content="Organiza tus compras semanales con nuestro plan nutricional personalizado">
+    
+    <!-- Performance optimizations -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Lista de Compras">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+    
+    <title>Lista de Compras Semanal - Plan Nutricional Personalizado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <h1>🛒 Lista de Compras Semanal</h1>
+            <p>Plan Nutricional Personalizado</p>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <!-- Week Navigation -->
+        <nav class="week-selector" role="tablist" aria-label="Navegación por semanas">
+            <button 
+                class="week-btn active" 
+                role="tab"
+                aria-selected="true"
+                aria-controls="week1"
+                id="week-btn-1"
+                tabindex="0">
+                Semana 1
+            </button>
+            <button 
+                class="week-btn" 
+                role="tab"
+                aria-selected="false"
+                aria-controls="week2"
+                id="week-btn-2"
+                tabindex="-1">
+                Semana 2
+            </button>
+            <button 
+                class="week-btn" 
+                role="tab"
+                aria-selected="false"
+                aria-controls="week3"
+                id="week-btn-3"
+                tabindex="-1">
+                Semana 3
+            </button>
+            <button 
+                class="week-btn" 
+                role="tab"
+                aria-selected="false"
+                aria-controls="week4"
+                id="week-btn-4"
+                tabindex="-1">
+                Semana 4
+            </button>
+        </nav>
+
+        <!-- Week 1 Content -->
+        <section id="week1" class="week-content" role="tabpanel" aria-labelledby="week-btn-1" aria-hidden="false">
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥚</span>
+                    <h2 class="category-title">Proteínas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Huevos</span>
+                        <span class="item-qty" aria-label="Cantidad: 28 piezas">28 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Pechuga de pollo</span>
+                        <span class="item-qty" aria-label="Cantidad: 1.5 kg">1.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Carne de res</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 kg">1 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Sardinas en lata</span>
+                        <span class="item-qty" aria-label="Cantidad: 4 latas">4 latas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jamón de pavo</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Queso fresco</span>
+                        <span class="item-qty" aria-label="Cantidad: 700g">700g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥬</span>
+                    <h2 class="category-title">Verduras</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mezcla de verduras</span>
+                        <span class="item-qty" aria-label="Cantidad: 3 kg">3 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Espinacas</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Nopales</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Brócoli</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍎</span>
+                    <h2 class="category-title">Frutas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Plátanos</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Manzanas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Naranjas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌾</span>
+                    <h2 class="category-title">Carbohidratos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Arroz</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 kg">2 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tortillas de maíz</span>
+                        <span class="item-qty" aria-label="Cantidad: 3 paquetes">3 paquetes</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥑</span>
+                    <h2 class="category-title">Grasas Saludables</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Aguacates</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥛</span>
+                    <h2 class="category-title">Lácteos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Leche Lala Proteína</span>
+                        <span class="item-qty" aria-label="Cantidad: 3 litros">3 litros</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Week 2 Content -->
+        <section id="week2" class="week-content" role="tabpanel" aria-labelledby="week-btn-2" aria-hidden="true" style="display: none;">
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥚</span>
+                    <h2 class="category-title">Proteínas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Huevos</span>
+                        <span class="item-qty" aria-label="Cantidad: 28 piezas">28 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Pechuga de pollo</span>
+                        <span class="item-qty" aria-label="Cantidad: 1.8 kg">1.8 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Carne de res</span>
+                        <span class="item-qty" aria-label="Cantidad: 1.2 kg">1.2 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Sardinas en lata</span>
+                        <span class="item-qty" aria-label="Cantidad: 5 latas">5 latas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jamón de pavo</span>
+                        <span class="item-qty" aria-label="Cantidad: 300g">300g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Queso fresco</span>
+                        <span class="item-qty" aria-label="Cantidad: 400g">400g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥬</span>
+                    <h2 class="category-title">Verduras</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mezcla de verduras</span>
+                        <span class="item-qty" aria-label="Cantidad: 2.5 kg">2.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jícama</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 kg">1 kg</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍎</span>
+                    <h2 class="category-title">Frutas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Manzanas verdes</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Naranjas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Toronjas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌰</span>
+                    <h2 class="category-title">Snacks</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Almendras</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌾</span>
+                    <h2 class="category-title">Carbohidratos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Arroz</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 kg">2 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tortillas de maíz</span>
+                        <span class="item-qty" aria-label="Cantidad: 3 paquetes">3 paquetes</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥑</span>
+                    <h2 class="category-title">Grasas Saludables</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Aguacates</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Week 3 Content -->
+        <section id="week3" class="week-content" role="tabpanel" aria-labelledby="week-btn-3" aria-hidden="true" style="display: none;">
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥚</span>
+                    <h2 class="category-title">Proteínas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Huevos</span>
+                        <span class="item-qty" aria-label="Cantidad: 49 piezas">49 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Pechuga de pollo</span>
+                        <span class="item-qty" aria-label="Cantidad: 2.5 kg">2.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Carne de res</span>
+                        <span class="item-qty" aria-label="Cantidad: 1.5 kg">1.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Sardinas en lata</span>
+                        <span class="item-qty" aria-label="Cantidad: 6 latas">6 latas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jamón de pavo</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Queso fresco</span>
+                        <span class="item-qty" aria-label="Cantidad: 800g">800g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥬</span>
+                    <h2 class="category-title">Verduras</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mezcla de verduras</span>
+                        <span class="item-qty" aria-label="Cantidad: 3.5 kg">3.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Nopales</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 kg">1 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jícama</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 kg">2 kg</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍎</span>
+                    <h2 class="category-title">Frutas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Plátanos</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mangos</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Piña</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 piezas">2 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Sandía</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 pieza">1 pieza</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Manzanas verdes</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Toronjas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍪</span>
+                    <h2 class="category-title">Snacks</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Galletas Marías</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 paquetes">2 paquetes</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌾</span>
+                    <h2 class="category-title">Carbohidratos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Arroz</span>
+                        <span class="item-qty" aria-label="Cantidad: 2.5 kg">2.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tortillas de maíz</span>
+                        <span class="item-qty" aria-label="Cantidad: 4 paquetes">4 paquetes</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥑</span>
+                    <h2 class="category-title">Grasas Saludables</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Aguacates</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Week 4 Content -->
+        <section id="week4" class="week-content" role="tabpanel" aria-labelledby="week-btn-4" aria-hidden="true" style="display: none;">
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥚</span>
+                    <h2 class="category-title">Proteínas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Huevos (claras)</span>
+                        <span class="item-qty" aria-label="Cantidad: 28 piezas">28 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Pechuga de pollo</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 kg">2 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Carne de res</span>
+                        <span class="item-qty" aria-label="Cantidad: 1.2 kg">1.2 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Filete de pescado</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 kg">1 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Sardinas en lata</span>
+                        <span class="item-qty" aria-label="Cantidad: 5 latas">5 latas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jamón de pavo</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Queso panela</span>
+                        <span class="item-qty" aria-label="Cantidad: 400g">400g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥬</span>
+                    <h2 class="category-title">Verduras</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mezcla de verduras</span>
+                        <span class="item-qty" aria-label="Cantidad: 2.5 kg">2.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Nopales</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 kg">1 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Pepino</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 kg">2 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Espinacas</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Apio</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 tallos">7 tallos</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Perejil</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 manojo">1 manojo</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍎</span>
+                    <h2 class="category-title">Frutas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Piña</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 piezas">2 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Manzanas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mangos</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Plátanos</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Melón o Sandía</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 pieza">1 pieza</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Duraznos</span>
+                        <span class="item-qty" aria-label="Cantidad: 14 piezas">14 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Toronjas</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌰</span>
+                    <h2 class="category-title">Snacks</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Almendras</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌾</span>
+                    <h2 class="category-title">Carbohidratos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Arroz</span>
+                        <span class="item-qty" aria-label="Cantidad: 1.5 kg">1.5 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tortillas de maíz</span>
+                        <span class="item-qty" aria-label="Cantidad: 3 paquetes">3 paquetes</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tostadas horneadas</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 paquetes">2 paquetes</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥑</span>
+                    <h2 class="category-title">Grasas Saludables</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Aguacates</span>
+                        <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍮</span>
+                    <h2 class="category-title">Otros</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Gelatina light</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 cajas">2 cajas</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Summary Section -->
+        <aside class="summary" role="complementary" aria-labelledby="summary-title">
+            <h3 id="summary-title">📊 Resumen de Compras</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <strong>~2.5kg</strong>
+                    <div>Proteína Animal/Semana</div>
+                </div>
+                <div class="summary-item">
+                    <strong>~3kg</strong>
+                    <div>Verduras/Semana</div>
+                </div>
+                <div class="summary-item">
+                    <strong>28-49</strong>
+                    <div>Huevos/Semana</div>
+                </div>
+                <div class="summary-item">
+                    <strong>2-2.5kg</strong>
+                    <div>Carbohidratos/Semana</div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Tips Section -->
+        <aside class="tips" role="complementary" aria-labelledby="tips-title">
+            <h3 id="tips-title">💡 Consejos de Compra</h3>
+            <ul>
+                <li>Compra las verduras y frutas frescas a mitad de semana para mejor frescura</li>
+                <li>Las proteínas pueden comprarse al inicio y congelarse por porciones</li>
+                <li>Prefiere sardinas en aceite de oliva o salsa de tomate sin conservadores</li>
+                <li>El arroz y tortillas se conservan bien toda la semana</li>
+                <li>Lava y prepara verduras al llegar del súper para ahorrar tiempo</li>
+                <li>Los aguacates cómpralos en diferentes estados de maduración</li>
+                <li>Congela el plátano maduro para los licuados</li>
+            
+            </ul>
+        </aside>
+        
+        
+    </main>
+
+    <!-- Loading indicator for JavaScript -->
+    <noscript>
+        <div style="text-align: center; padding: 20px; background: #ffebee; color: #c62828; margin: 20px;">
+            <strong>JavaScript deshabilitado:</strong> Esta aplicación requiere JavaScript para funcionar correctamente. 
+            Por favor, habilita JavaScript en tu navegador.
+        </div>
+    </noscript>
+
+    <script src="script.js"></script>
+</body>
+</html>
