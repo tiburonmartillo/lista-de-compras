@@ -8,7 +8,7 @@ Una aplicación web optimizada para gestionar listas de compras semanales con pl
 
 ## 🌐 Demo en Vivo
 
-**Accede a la aplicación:** [https://tu-usuario.github.io/lista-de-compras](https://tu-usuario.github.io/lista-de-compras)
+**Accede a la aplicación:** [https://tu-usuario.github.io/lista-de-compras](https://tiburonmartillo.github.io/lista-de-compras)
 
 > ⚠️ **Nota:** Reemplaza `tu-usuario` con tu nombre de usuario de GitHub
 
