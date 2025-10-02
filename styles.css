@@ -296,6 +296,217 @@ body {
     border: 0;
 }
 
+/* Main content sections */
+.main-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.main-content.hidden {
+    display: none !important;
+}
+
+/* Sub-navigation */
+.sub-nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sub-btn {
+    padding: 15px 25px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 400;
+    transition: var(--transition);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    margin-bottom: -1px;
+}
+
+.sub-btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+    transform: none;
+    border-bottom-color: var(--border-color);
+}
+
+.sub-btn.active {
+    background: transparent;
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 500;
+}
+
+.sub-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Nutrition plan styles */
+.nutrition-plan {
+    margin-bottom: 60px;
+}
+
+.shopping-title {
+    font-size: 2.2em;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin: 60px 0 40px 0;
+    letter-spacing: -0.01em;
+    border-top: 2px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.plan-header {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.plan-title {
+    font-size: 2.2em;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+}
+
+.plan-subtitle {
+    font-size: 1.1em;
+    color: var(--text-light);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.meal-section {
+    margin-bottom: 40px;
+    padding: 30px 0px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.meal-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+.meal-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.meal-list li {
+    padding: 12px 0;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px;
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.meal-list li:last-child {
+    border-bottom: none;
+}
+
+.meal-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* Nutrition notes */
+.nutrition-notes {
+    background: var(--bg-secondary);
+    padding: 50px 0px;
+    margin-top: 80px;
+    border-radius: var(--border-radius);
+    border-top: 1px solid var(--border-color);
+}
+
+.nutrition-notes h3 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 1.8em;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.note-section {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.note-section h4 {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+}
+
+.note-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.note-section li {
+    padding: 8px 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+}
+
+.note-section li::before {
+    content: "→";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1em;
+}
+
+.disclaimer {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--warning-color);
+    text-align: center;
+}
+
+.disclaimer p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* .hidden class removed - using inline styles instead */
 
 /* Responsive design */
@@ -369,6 +580,45 @@ body {
     .category-title {
         font-size: 1.5em;
     }
+    
+    /* Nutrition responsive */
+    .sub-nav {
+        flex-direction: column;
+        border-bottom: none;
+        gap: 0px;
+    }
+    
+    .sub-btn {
+        padding: 12px 0px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
+    }
+    
+    .sub-btn:last-child {
+        border-bottom: none;
+    }
+    
+    .plan-title {
+        font-size: 1.8em;
+    }
+    
+    .meal-section {
+        padding: 20px 0px;
+    }
+    
+    .meal-title {
+        font-size: 1.2em;
+    }
+    
+    .notes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .note-section {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -398,6 +648,28 @@ body {
     
     .summary-item strong {
         font-size: 2em;
+    }
+    
+    /* Nutrition mobile */
+    .plan-title {
+        font-size: 1.6em;
+    }
+    
+    .meal-title {
+        font-size: 1.1em;
+    }
+    
+    .meal-list li {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+    
+    .note-section h4 {
+        font-size: 1.1em;
+    }
+    
+    .note-section li {
+        font-size: 0.9rem;
     }
 }
 

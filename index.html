@@ -37,7 +37,7 @@
 </head>
 <body>
     <header class="header" role="banner">
-        <div class="container">
+    <div class="container">
             <h1>🛒 Lista de Compras Semanal</h1>
             <p>Plan Nutricional Personalizado</p>
         </div>
@@ -47,7 +47,7 @@
         <!-- Week Navigation -->
         <nav class="week-selector" role="tablist" aria-label="Navegación por semanas">
             <button 
-                class="week-btn active" 
+                class="sub-btn active" 
                 role="tab"
                 aria-selected="true"
                 aria-controls="week1"
@@ -56,7 +56,7 @@
                 Semana 1
             </button>
             <button 
-                class="week-btn" 
+                class="sub-btn" 
                 role="tab"
                 aria-selected="false"
                 aria-controls="week2"
@@ -65,7 +65,7 @@
                 Semana 2
             </button>
             <button 
-                class="week-btn" 
+                class="sub-btn" 
                 role="tab"
                 aria-selected="false"
                 aria-controls="week3"
@@ -74,7 +74,7 @@
                 Semana 3
             </button>
             <button 
-                class="week-btn" 
+                class="sub-btn" 
                 role="tab"
                 aria-selected="false"
                 aria-controls="week4"
@@ -82,10 +82,58 @@
                 tabindex="-1">
                 Semana 4
             </button>
+            <button 
+                class="sub-btn" 
+                role="tab"
+                aria-selected="false"
+                aria-controls="week5"
+                id="week-btn-5"
+                tabindex="-1">
+                Días 29-30
+            </button>
         </nav>
 
-        <!-- Week 1 Content -->
-        <section id="week1" class="week-content" role="tabpanel" aria-labelledby="week-btn-1" aria-hidden="false">
+
+        <!-- Shopping List Content -->
+        <section id="shopping-list" class="main-content" role="tabpanel" aria-labelledby="shopping-btn" aria-hidden="false">
+            <!-- Week 1 Content -->
+            <section id="week1" class="week-content" role="tabpanel" aria-labelledby="week-btn-1" aria-hidden="false">
+                <!-- Plan Nutricional Semana 1 -->
+                <article class="nutrition-plan">
+                    <header class="plan-header">
+                        <h2 class="plan-title">🍽️ PLAN NUTRICIONAL - SEMANA 1</h2>
+                        <p class="plan-subtitle">Plan Base (Alta Proteína) - Días 1-7</p>
+                    </header>
+                    <div class="meal-section">
+                        <h3 class="meal-title">🌅 DESAYUNO (10:00 AM)</h3>
+                        <ul class="meal-list">
+                            <li>Omelette (4 huevos completos, 2 rebanadas de jamón de pavo, 1 taza de verduras mixtas)</li>
+                            <li>Licuado (2 tazas de leche lala proteína, 1 plátano)</li>
+                            <li>1 taza de arroz o 3 tortillas de maíz</li>
+                        </ul>
+                </div>
+                    <div class="meal-section">
+                        <h3 class="meal-title">🍽️ COMIDA (2:00 PM)</h3>
+                        <ul class="meal-list">
+                            <li>150gr de pollo, carne de res o sardina en lata (aceite o salsa de tomate)</li>
+                            <li>3 tortillas de maíz o 1 taza de arroz</li>
+                            <li>1½ taza de verdura mixta</li>
+                            <li>2 cucharadas de aguacate</li>
+                            <li>1 manzana</li>
+                        </ul>
+                    </div>
+                    <div class="meal-section">
+                        <h3 class="meal-title">🌙 CENA (6:00 PM)</h3>
+                        <ul class="meal-list">
+                            <li>3 quesadillas (1 tortilla de maíz, 45gr de queso fresco, 45gr de pollo, 1 cucharada de aguacate c/u)</li>
+                            <li>1 taza de verdura mixta libre elección</li>
+                            <li>1 naranja en gajos</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Lista de Compras -->
+                <h2 class="shopping-title">🛒 LISTA DE COMPRAS - SEMANA 1</h2>
             <article class="category">
                 <header class="category-header">
                     <span class="category-icon" aria-hidden="true">🥚</span>
@@ -211,6 +259,49 @@
 
         <!-- Week 2 Content -->
         <section id="week2" class="week-content" role="tabpanel" aria-labelledby="week-btn-2" aria-hidden="true" style="display: none;">
+            <!-- Plan Nutricional Semana 2 -->
+            <article class="nutrition-plan">
+                <header class="plan-header">
+                    <h2 class="plan-title">🍽️ PLAN NUTRICIONAL - SEMANA 2</h2>
+                    <p class="plan-subtitle">Plan con Colación - Días 8-14</p>
+                </header>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌅 DESAYUNO (10:00 AM)</h3>
+                    <ul class="meal-list">
+                        <li>Omelette (4 huevos completos, 2 rebanadas de jamón de pavo, 1 taza de verduras mixtas)</li>
+                        <li>1 manzana o 1 naranja</li>
+                        <li>1 taza de arroz</li>
+                    </ul>
+            </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍎 COLACIÓN (12:30 PM)</h3>
+                    <ul class="meal-list">
+                        <li>1 toronja en gajos</li>
+                        <li>10 almendras</li>
+                    </ul>
+        </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍽️ COMIDA (2:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>180gr de pollo, carne de res o sardina en lata (aceite o salsa de tomate)</li>
+                        <li>1 taza de arroz o 3 tortillas de maíz</li>
+                        <li>1 taza de verduras mixtas</li>
+                        <li>1 naranja o 1 manzana verde</li>
+                        <li>2 cucharadas de aguacate</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌙 CENA (6:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>3 rebanadas de jamón de pavo enrolladas con 45gr de queso fresco</li>
+                        <li>1 taza de jícama</li>
+                        <li>1 toronja en gajos</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Lista de Compras -->
+            <h2 class="shopping-title">🛒 LISTA DE COMPRAS - SEMANA 2</h2>
             <article class="category">
                 <header class="category-header">
                     <span class="category-icon" aria-hidden="true">🥚</span>
@@ -321,13 +412,102 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Aguacates</span>
                         <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
-                    </div>
+            </div>
                 </div>
             </article>
+
+            <!-- Notas Nutricionales -->
+            <aside class="nutrition-notes">
+                <h3>📋 Notas Importantes</h3>
+                <div class="notes-grid">
+                    <div class="note-section">
+                        <h4>💧 Hidratación</h4>
+                        <ul>
+                            <li>Mínimo 2 litros de agua al día</li>
+                            <li>El jugo verde incluye agua al gusto</li>
+                        </ul>
+                </div>
+                    <div class="note-section">
+                        <h4>🥗 Preparación</h4>
+                        <ul>
+                            <li>Verduras mixtas: brócoli, calabaza, zanahoria, chayote, espinaca</li>
+                            <li>Cocción preferente: asado, horneado, vapor</li>
+                            <li>Aguacate: siempre medido (control de grasas)</li>
+                        </ul>
+                    </div>
+                    <div class="note-section">
+                        <h4>🔄 Flexibilidad</h4>
+                        <ul>
+                            <li>Intercambiar frutas de la misma semana</li>
+                            <li>Proteínas intercambiables (pollo/res/pescado)</li>
+                            <li>Arroz y tortillas opcionales según preferencia</li>
+                        </ul>
+                </div>
+                    <div class="note-section">
+                        <h4>⚖️ Sustituciones</h4>
+                        <ul>
+                            <li>Arroz ↔ Tortillas de maíz (nunca pan)</li>
+                            <li>Jamón de pavo ↔ Pechuga de pollo</li>
+                            <li>Queso fresco ↔ Queso panela</li>
+                            <li>Atún ↔ Sardina en lata</li>
+                            <li>Gelatina light: sin azúcar</li>
+                        </ul>
+            </div>
+        </div>
+                <div class="disclaimer">
+                    <p><strong>⚠️ Importante:</strong> Consulta a tu nutriólogo antes de realizar cambios significativos en tu plan alimenticio.</p>
+                </div>
+            </aside>
         </section>
 
         <!-- Week 3 Content -->
         <section id="week3" class="week-content" role="tabpanel" aria-labelledby="week-btn-3" aria-hidden="true" style="display: none;">
+            <!-- Plan Nutricional Semana 3 -->
+            <article class="nutrition-plan">
+                <header class="plan-header">
+                    <h2 class="plan-title">🍽️ PLAN NUTRICIONAL - SEMANA 3</h2>
+                    <p class="plan-subtitle">Plan Alto Volumen - Días 15-21</p>
+                </header>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌅 DESAYUNO (10:00 AM)</h3>
+                    <ul class="meal-list">
+                        <li>Omelette (5 huevos completos, 2 rebanadas de jamón de pavo, 1 taza de verduras mixtas)</li>
+                        <li>1 taza de arroz o 3 tortillas de maíz</li>
+                        <li>1 taza de nopales</li>
+                        <li>1 manzana verde o 1 toronja</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍽️ COMIDA (2:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>250-300gr de carne de res, pollo o sardina en lata (aceite o salsa de tomate)</li>
+                        <li>3 tortillas de maíz o 1 taza de arroz</li>
+                        <li>2 tazas de verduras mixtas</li>
+                        <li>1 mango o 1 taza de piña</li>
+                        <li>2 cucharadas de aguacate</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍎 COLACIÓN (4:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>1 taza de jícama</li>
+                        <li>1 mango, 1 taza de sandía o 1 plátano</li>
+                        <li>5 galletas marías</li>
+                        <li>2-3 huevos cocidos</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌙 CENA (6:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>2-3 quesadillas (1 tortilla de maíz, 45gr de queso fresco, 60gr de pollo c/u)</li>
+                        <li>1 taza de jícama</li>
+                        <li>1 manzana</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Lista de Compras -->
+            <h2 class="shopping-title">🛒 LISTA DE COMPRAS - SEMANA 3</h2>
             <article class="category">
                 <header class="category-header">
                     <span class="category-icon" aria-hidden="true">🥚</span>
@@ -454,13 +634,100 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Aguacates</span>
                         <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
-                    </div>
+            </div>
                 </div>
             </article>
+
+            <!-- Notas Nutricionales -->
+            <aside class="nutrition-notes">
+                <h3>📋 Notas Importantes</h3>
+                <div class="notes-grid">
+                    <div class="note-section">
+                        <h4>💧 Hidratación</h4>
+                        <ul>
+                            <li>Mínimo 2 litros de agua al día</li>
+                            <li>El jugo verde incluye agua al gusto</li>
+                        </ul>
+                </div>
+                    <div class="note-section">
+                        <h4>🥗 Preparación</h4>
+                        <ul>
+                            <li>Verduras mixtas: brócoli, calabaza, zanahoria, chayote, espinaca</li>
+                            <li>Cocción preferente: asado, horneado, vapor</li>
+                            <li>Aguacate: siempre medido (control de grasas)</li>
+                        </ul>
+                    </div>
+                    <div class="note-section">
+                        <h4>🔄 Flexibilidad</h4>
+                        <ul>
+                            <li>Intercambiar frutas de la misma semana</li>
+                            <li>Proteínas intercambiables (pollo/res/pescado)</li>
+                            <li>Arroz y tortillas opcionales según preferencia</li>
+                        </ul>
+                </div>
+                    <div class="note-section">
+                        <h4>⚖️ Sustituciones</h4>
+                        <ul>
+                            <li>Arroz ↔ Tortillas de maíz (nunca pan)</li>
+                            <li>Jamón de pavo ↔ Pechuga de pollo</li>
+                            <li>Queso fresco ↔ Queso panela</li>
+                            <li>Atún ↔ Sardina en lata</li>
+                            <li>Gelatina light: sin azúcar</li>
+                        </ul>
+            </div>
+        </div>
+                <div class="disclaimer">
+                    <p><strong>⚠️ Importante:</strong> Consulta a tu nutriólogo antes de realizar cambios significativos en tu plan alimenticio.</p>
+                </div>
+            </aside>
         </section>
 
         <!-- Week 4 Content -->
         <section id="week4" class="week-content" role="tabpanel" aria-labelledby="week-btn-4" aria-hidden="true" style="display: none;">
+            <!-- Plan Nutricional Semana 4 -->
+            <article class="nutrition-plan">
+                <header class="plan-header">
+                    <h2 class="plan-title">🍽️ PLAN NUTRICIONAL - SEMANA 4</h2>
+                    <p class="plan-subtitle">Plan Detox (Jugo Verde) - Días 22-28</p>
+                </header>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌅 DESAYUNO (10:00 AM)</h3>
+                    <ul class="meal-list">
+                        <li>Jugo verde (2 rebanadas de piña, ½ manzana, 1 apio, 1 puño de perejil, ½ pepino, ½ taza de espinaca, agregar agua al gusto)</li>
+                        <li>Omelette (4 claras de huevo, 1 taza de nopales o a la mexicana, 2 rebanadas de jamón de pavo)</li>
+                        <li>2/3 taza de arroz o 1 tortilla de maíz</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍎 COLACIÓN (12:30 PM)</h3>
+                    <ul class="meal-list">
+                        <li>1 taza de pepino</li>
+                        <li>2 duraznos o 1 toronja en gajos</li>
+                        <li>10 almendras</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍽️ COMIDA (2:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>200gr de pollo, carne de res, filete de pescado o sardina en lata (aceite o salsa de tomate)</li>
+                        <li>2 tortillas de maíz o 2/3 taza de arroz</li>
+                        <li>1½ taza de ensalada mixta</li>
+                        <li>1 mango o 1 taza de piña o 1 plátano</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌙 CENA (6:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>Quesadillas (2 tortillas de maíz, 45gr de queso panela, 150gr de pollo, 2 cucharadas de aguacate total)</li>
+                        <li>1 taza de pepino</li>
+                        <li>1 taza de melón o sandía picada</li>
+                        <li>1 taza de gelatina light</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Lista de Compras -->
+            <h2 class="shopping-title">🛒 LISTA DE COMPRAS - SEMANA 4</h2>
             <article class="category">
                 <header class="category-header">
                     <span class="category-icon" aria-hidden="true">🥚</span>
@@ -577,7 +844,7 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Almendras</span>
                         <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
-                    </div>
+            </div>
                 </div>
             </article>
             
@@ -590,7 +857,7 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Arroz</span>
                         <span class="item-qty" aria-label="Cantidad: 1.5 kg">1.5 kg</span>
-                    </div>
+                </div>
                     <div class="item" role="listitem">
                         <span class="item-name">Tortillas de maíz</span>
                         <span class="item-qty" aria-label="Cantidad: 3 paquetes">3 paquetes</span>
@@ -598,8 +865,8 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Tostadas horneadas</span>
                         <span class="item-qty" aria-label="Cantidad: 2 paquetes">2 paquetes</span>
-                    </div>
                 </div>
+            </div>
             </article>
             
             <article class="category">
@@ -611,7 +878,7 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Aguacates</span>
                         <span class="item-qty" aria-label="Cantidad: 7 piezas">7 piezas</span>
-                    </div>
+                </div>
                 </div>
             </article>
             
@@ -624,11 +891,295 @@
                     <div class="item" role="listitem">
                         <span class="item-name">Gelatina light</span>
                         <span class="item-qty" aria-label="Cantidad: 2 cajas">2 cajas</span>
+                </div>
+                    </div>
+            </article>
+
+            <!-- Notas Nutricionales -->
+            <aside class="nutrition-notes">
+                <h3>📋 Notas Importantes</h3>
+                <div class="notes-grid">
+                    <div class="note-section">
+                        <h4>💧 Hidratación</h4>
+                        <ul>
+                            <li>Mínimo 2 litros de agua al día</li>
+                            <li>El jugo verde incluye agua al gusto</li>
+                        </ul>
+                    </div>
+                    <div class="note-section">
+                        <h4>🥗 Preparación</h4>
+                        <ul>
+                            <li>Verduras mixtas: brócoli, calabaza, zanahoria, chayote, espinaca</li>
+                            <li>Cocción preferente: asado, horneado, vapor</li>
+                            <li>Aguacate: siempre medido (control de grasas)</li>
+                        </ul>
+                    </div>
+                    <div class="note-section">
+                        <h4>🔄 Flexibilidad</h4>
+                        <ul>
+                            <li>Intercambiar frutas de la misma semana</li>
+                            <li>Proteínas intercambiables (pollo/res/pescado)</li>
+                            <li>Arroz y tortillas opcionales según preferencia</li>
+                        </ul>
+                    </div>
+                    <div class="note-section">
+                        <h4>⚖️ Sustituciones</h4>
+                        <ul>
+                            <li>Arroz ↔ Tortillas de maíz (nunca pan)</li>
+                            <li>Jamón de pavo ↔ Pechuga de pollo</li>
+                            <li>Queso fresco ↔ Queso panela</li>
+                            <li>Atún ↔ Sardina en lata</li>
+                            <li>Gelatina light: sin azúcar</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="disclaimer">
+                    <p><strong>⚠️ Importante:</strong> Consulta a tu nutriólogo antes de realizar cambios significativos en tu plan alimenticio.</p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Week 5 Content (Días 29-30) -->
+        <section id="week5" class="week-content" role="tabpanel" aria-labelledby="week-btn-5" aria-hidden="true" style="display: none;">
+            <!-- Plan Nutricional Días 29-30 -->
+            <article class="nutrition-plan">
+                <header class="plan-header">
+                    <h2 class="plan-title">🍽️ PLAN NUTRICIONAL - DÍAS 29-30</h2>
+                    <p class="plan-subtitle">Plan Ligero - Pescado y Atún</p>
+                </header>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌅 DESAYUNO (10:00 AM)</h3>
+                    <ul class="meal-list">
+                        <li>Omelette (3 huevos completos, 2 rebanadas de jamón de pavo, 1 taza de verdura)</li>
+                        <li>Licuado (1 taza de leche light, 5 fresas o 1 plátano, 1 taza de espinacas, endulzar con sustituto)</li>
+                        <li>2/3 taza de arroz o 2 tortillas de maíz</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍎 COLACIÓN (12:30 PM)</h3>
+                    <ul class="meal-list">
+                        <li>Ensalada de atún o sardina (1 lata en agua, aceite o salsa de tomate, 1 taza de verduras, mostaza libre)</li>
+                        <li>1 tostada</li>
+                        <li>1 mango o 1 taza de piña o 1 plátano</li>
+                        <li>1 taza de gelatina light</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🍽️ COMIDA (2:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>210gr de pollo, carne de res, pescado o sardina en lata (aceite o salsa de tomate)</li>
+                        <li>2/3 taza de arroz o 2 tortillas de maíz</li>
+                        <li>2 tazas de verduras</li>
+                        <li>1 mango o 1 taza de piña</li>
+                        <li>2 cucharadas de aguacate</li>
+                    </ul>
+                </div>
+                <div class="meal-section">
+                    <h3 class="meal-title">🌙 CENA (6:00 PM)</h3>
+                    <ul class="meal-list">
+                        <li>150gr de filete de pescado, 2 latas de atún o sardina en agua</li>
+                        <li>1½ tazas de pepino y jícama</li>
+                        <li>1-2 tostadas horneadas</li>
+                        <li>1 taza de gelatina light</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Lista de Compras -->
+            <h2 class="shopping-title">🛒 LISTA DE COMPRAS - DÍAS 29-30</h2>
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥚</span>
+                    <h2 class="category-title">Proteínas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Huevos</span>
+                        <span class="item-qty" aria-label="Cantidad: 6 piezas">6 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Filete de pescado</span>
+                        <span class="item-qty" aria-label="Cantidad: 300g">300g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Atún en agua</span>
+                        <span class="item-qty" aria-label="Cantidad: 4 latas">4 latas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Sardinas en lata</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 latas">2 latas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jamón de pavo</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
                     </div>
                 </div>
             </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥬</span>
+                    <h2 class="category-title">Verduras</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Verduras mixtas</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 kg">1 kg</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Pepino</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Jícama</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Espinacas</span>
+                        <span class="item-qty" aria-label="Cantidad: 200g">200g</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍎</span>
+                    <h2 class="category-title">Frutas</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Fresas</span>
+                        <span class="item-qty" aria-label="Cantidad: 250g">250g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Plátanos</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 piezas">2 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mangos</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 piezas">2 piezas</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Piña</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 pieza">1 pieza</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🌾</span>
+                    <h2 class="category-title">Carbohidratos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Arroz</span>
+                        <span class="item-qty" aria-label="Cantidad: 500g">500g</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tortillas de maíz</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 paquete">1 paquete</span>
+                    </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Tostadas</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 paquete">1 paquete</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥑</span>
+                    <h2 class="category-title">Grasas Saludables</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Aguacates</span>
+                        <span class="item-qty" aria-label="Cantidad: 2 piezas">2 piezas</span>
+            </div>
+                </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🥛</span>
+                    <h2 class="category-title">Lácteos</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Leche light</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 litro">1 litro</span>
+                </div>
+                    </div>
+            </article>
+            
+            <article class="category">
+                <header class="category-header">
+                    <span class="category-icon" aria-hidden="true">🍮</span>
+                    <h2 class="category-title">Otros</h2>
+                </header>
+                <div class="items-grid" role="list">
+                    <div class="item" role="listitem">
+                        <span class="item-name">Gelatina light</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 caja">1 caja</span>
+                </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Endulzante sustituto</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 frasco">1 frasco</span>
+            </div>
+                    <div class="item" role="listitem">
+                        <span class="item-name">Mostaza</span>
+                        <span class="item-qty" aria-label="Cantidad: 1 frasco">1 frasco</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Notas Nutricionales -->
+            <aside class="nutrition-notes">
+                <h3>📋 Notas Importantes</h3>
+                <div class="notes-grid">
+                    <div class="note-section">
+                        <h4>💧 Hidratación</h4>
+                        <ul>
+                            <li>Mínimo 2 litros de agua al día</li>
+                            <li>El jugo verde incluye agua al gusto</li>
+                        </ul>
+                </div>
+                    <div class="note-section">
+                        <h4>🥗 Preparación</h4>
+                        <ul>
+                            <li>Verduras mixtas: brócoli, calabaza, zanahoria, chayote, espinaca</li>
+                            <li>Cocción preferente: asado, horneado, vapor</li>
+                            <li>Aguacate: siempre medido (control de grasas)</li>
+                        </ul>
+                    </div>
+                    <div class="note-section">
+                        <h4>🔄 Flexibilidad</h4>
+                        <ul>
+                            <li>Intercambiar frutas de la misma semana</li>
+                            <li>Proteínas intercambiables (pollo/res/pescado)</li>
+                            <li>Arroz y tortillas opcionales según preferencia</li>
+                        </ul>
+                </div>
+                    <div class="note-section">
+                        <h4>⚖️ Sustituciones</h4>
+                        <ul>
+                            <li>Arroz ↔ Tortillas de maíz (nunca pan)</li>
+                            <li>Jamón de pavo ↔ Pechuga de pollo</li>
+                            <li>Queso fresco ↔ Queso panela</li>
+                            <li>Atún ↔ Sardina en lata</li>
+                            <li>Gelatina light: sin azúcar</li>
+                        </ul>
+            </div>
+        </div>
+                <div class="disclaimer">
+                    <p><strong>⚠️ Importante:</strong> Consulta a tu nutriólogo antes de realizar cambios significativos en tu plan alimenticio.</p>
+                </div>
+            </aside>
+        </section>
         </section>
 
+        
         <!-- Summary Section -->
         <aside class="summary" role="complementary" aria-labelledby="summary-title">
             <h3 id="summary-title">📊 Resumen de Compras</h3>
