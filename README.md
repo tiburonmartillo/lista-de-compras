@@ -1,6 +1,16 @@
-# Lista de Compras Semanal - Optimizada
+# 🛒 Lista de Compras Semanal
 
 Una aplicación web optimizada para gestionar listas de compras semanales con plan nutricional personalizado.
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visitar%20Sitio-brightgreen)](https://tu-usuario.github.io/lista-de-compras)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-blue)](https://pages.github.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## 🌐 Demo en Vivo
+
+**Accede a la aplicación:** [https://tu-usuario.github.io/lista-de-compras](https://tu-usuario.github.io/lista-de-compras)
+
+> ⚠️ **Nota:** Reemplaza `tu-usuario` con tu nombre de usuario de GitHub
 
 ## 🚀 Optimizaciones Implementadas
 
@@ -164,6 +174,52 @@ console.error('Error details...');
 ## 📄 Licencia
 
 Este proyecto es de uso libre para fines educativos y personales.
+
+## 🚀 Despliegue en GitHub Pages
+
+### Pasos para Publicar:
+
+1. **Crear repositorio en GitHub:**
+   ```bash
+   # Crear un nuevo repositorio en GitHub con el nombre "lista-de-compras"
+   ```
+
+2. **Conectar repositorio local:**
+   ```bash
+   git remote add origin https://github.com/TU-USUARIO/lista-de-compras.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. **Activar GitHub Pages:**
+   - Ve a Settings > Pages
+   - Source: Deploy from a branch
+   - Branch: main
+   - Folder: / (root)
+   - Save
+
+4. **Acceder a tu sitio:**
+   ```
+   https://TU-USUARIO.github.io/lista-de-compras
+   ```
+
+### Estructura del Proyecto para GitHub Pages:
+```
+lista-de-compras/
+├── index.html          # Página principal (se sirve automáticamente)
+├── index.min.html      # Versión minificada
+├── styles.css          # CSS principal
+├── styles.min.css      # CSS minificado
+├── script.js           # JavaScript principal
+├── script.min.js       # JavaScript minificado
+└── README.md           # Documentación
+```
+
+### Configuración Automática:
+- ✅ **Sin configuración adicional** - GitHub Pages sirve `index.html` automáticamente
+- ✅ **HTTPS habilitado** por defecto
+- ✅ **Dominio personalizado** disponible si lo deseas
+- ✅ **Actualización automática** con cada push
 
 ---
 
